@@ -79,7 +79,7 @@ class _ChewieAudioDemoState extends State<ChewieAudioDemo> {
           children: <Widget>[
             Expanded(
               child: Center(
-                child: _chewieAudioController != null && _chewieAudioController.videoPlayerController.value.initialized
+                child: _chewieAudioController != null && _chewieAudioController.videoPlayerController.value.isInitialized
                     ? ChewieAudio(
                         controller: _chewieAudioController,
                       )

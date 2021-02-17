@@ -179,7 +179,7 @@ class _MaterialControlsState extends State<MaterialControls> with SingleTickerPr
         playPauseIconAnimationController.reverse();
         controller.pause();
       } else {
-        if (!controller.value.initialized) {
+        if (!controller.value.isInitialized) {
           controller.initialize().then((_) {
             controller.play();
             playPauseIconAnimationController.forward();

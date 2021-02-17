@@ -105,7 +105,7 @@ class ChewieAudioController extends ChangeNotifier {
   Future _initialize() async {
     await videoPlayerController.setLooping(looping);
 
-    if ((autoInitialize || autoPlay) && !videoPlayerController.value.initialized) {
+    if ((autoInitialize || autoPlay) && !videoPlayerController.value.isInitialized) {
       await videoPlayerController.initialize();
     }
 

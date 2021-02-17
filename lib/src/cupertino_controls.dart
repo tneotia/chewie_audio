@@ -337,7 +337,7 @@ class _CupertinoControlsState extends State<CupertinoControls> with SingleTicker
       if (controller.value.isPlaying) {
         controller.pause();
       } else {
-        if (!controller.value.initialized) {
+        if (!controller.value.isInitialized) {
           controller.initialize().then((_) {
             controller.play();
           });
